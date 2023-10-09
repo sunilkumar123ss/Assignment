@@ -24,6 +24,12 @@ A Java Spring Boot application that implements a RESTful API for managing items.
 - [GET /items/{id}](https://crowded-waste-production.up.railway.app/items/{id}): Get an item by ID.
 - [POST /items](https://crowded-waste-production.up.railway.app/items): Add a new item.
 
+  ### Adding a New Item
+To add a new item to the API, you can make a POST request with the following JSON payload:
+Example using cURL:
+curl -X POST -H "Content-Type: application/json" -d '{"name":"New Item", "description":"Description of the new item"}' http://localhost:8080/items
+
+
 ### Example:
 
 To get a list of all items, you can use the following URL:
