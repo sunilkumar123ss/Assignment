@@ -19,9 +19,16 @@ public class ItemController {
     }
 
     @GetMapping("/{id}")
-    public Item getItemById(@PathVariable Long id) {
-        return itemRepository.getItemById(id);
+    public Item getItemById(@PathVariable String id) {
+        try {
+            Long itemId = Long.parseLong(id);
+            return itemRepository.getItemById(itemId);
+        } catch (NumberFormatException e) {
+            // Handle the case where id is not a valid Long value
+            return null;
+        }
     }
+
 
     @PostMapping
     public void addItem(@RequestBody Item item) {

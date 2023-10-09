@@ -30,7 +30,7 @@ import org.springframework.context.annotation.Configuration;
             item2.setDescription("Description of Item 2");
             itemRepository.addItem(item2);
 
-            
+
         }
     }
 
