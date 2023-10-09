@@ -23,3 +23,16 @@ The application should now be running on `http://localhost:8080`.
 - **GET /items/{id}**: Get an item by ID.
 - **POST /items**: Add a new item.
 
+### Adding a New Item
+To add a new item to the API, you can make a POST request with the following JSON payload:
+Example using cURL:
+curl -X POST -H "Content-Type: application/json" -d '{"name":"New Item", "description":"Description of the new item"}' http://localhost:8080/items
+
+
+```json
+{
+    "name": "New Item",
+    "description": "Description of the new item"
+}
+
+
